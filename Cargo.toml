@@ -1,6 +1,6 @@
 [package]
 name = "gpui_util-gpui-standalone"
-version = "1.7.2"
+version = "1.8.2"
 edition = "2024"
 license = "Apache-2.0"
 description = "Standalone mirror of Zed's gpui_util crate."
@@ -13,3 +13,6 @@ name = "gpui_util"
 [dependencies]
 anyhow = "^1.0.86"
 log = {version = "^0.4.16", features = ["kv_unstable_serde", "serde"]}
+
+[target."cfg(target_os = \"windows\")".dependencies]
+which = "^6.0.0"
